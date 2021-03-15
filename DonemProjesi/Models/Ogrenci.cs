@@ -16,7 +16,6 @@ namespace DonemProjesi.Models
         public string Sifre { get; set; }
 
         //FK
-        public int ProjeID { get; set; }
-        public Proje Proje { get; set; }
+
     }
 }

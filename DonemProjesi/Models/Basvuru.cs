@@ -12,7 +12,6 @@ namespace DonemProjesi.Models
         public bool KabulEdildimi { get; set; }
 
         //FK
-        public int ProjeID { get; set; }
-        public int OgrenciID { get; set; }
+
     }
 }

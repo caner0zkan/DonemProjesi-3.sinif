@@ -51,3 +51,7 @@ D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\roslyn\System.Buffe
 D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\roslyn\System.Memory.dll
 D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\roslyn\System.Numerics.Vectors.dll
 D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\EntityFramework.dll
+D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\EntityFramework.SqlServer.dll
+D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\EntityFramework.xml
+D:\APP PROJECTS\GitHub\DonemProjesi-3.sinif\DonemProjesi\bin\EntityFramework.SqlServer.xml

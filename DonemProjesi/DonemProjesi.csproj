@@ -114,8 +114,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Basvuru.cs" />
-    <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\Initializer.cs" />
+    <Compile Include="Models\OgrenciContext.cs" />
+    <Compile Include="Models\OgrenciInitializer.cs" />
     <Compile Include="Models\Ogrenci.cs" />
     <Compile Include="Models\Proje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

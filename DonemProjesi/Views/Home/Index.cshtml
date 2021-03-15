@@ -1,7 +1,13 @@
-﻿
+﻿@model IEnumerable<DonemProjesi.Models.Ogrenci>
+
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+@foreach (var item in Model)
+{
+    <p>@item.Bolum</p>
+}
