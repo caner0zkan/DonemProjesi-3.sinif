@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DonemProjesi.Models.Basvuru>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjeSahibimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KabulEdildimi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjeSahibimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KabulEdildimi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BasvuruID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BasvuruID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BasvuruID })
+        </td>
+    </tr>
+}
+
+</table>
