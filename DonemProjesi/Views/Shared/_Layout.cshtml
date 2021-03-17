@@ -4,45 +4,136 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Dönem Projem</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="~/ui/style.css">
+
+    <!--<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>-->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <nav>
+        <div class="container clearfix">
+            <div id="logo-box">
+                <a href="/Home/Index" class="logo">
+                    Projem
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            <div id="nav-links" class="responsive">
+                <ul>
+                    <li class="nav-item">
+                        <a href="/Ogrenci/Create" class="nav-link text-uppercase">
+                            ÜYE OL
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-uppercase">
+                            GİRİŞ YAP
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-uppercase">
+                            FORUM
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container body-content">
+    <div>
         <div class="row">
             <div class="col-md-12">
                 @RenderBody()
             </div>
         </div>
-        <hr />
-
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <footer>
+        <div class="container clearfix">
+
+            <div class="col">
+                <h4 class="text-uppercase">KONUM</h4>
+                <p>
+                    Konya Teknik Üniversitesi Selçuklu-KONYA
+                </p>
+            </div>
+            <div class="col">
+                <h4 class="text-uppercase">BİZİ TAKİP EDİN</h4>
+                <ul>
+
+                    <li>
+                        <button class="btn btn-outline btn-social">
+                            <i class="fab fa-fw fa-facebook-f"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline btn-social">
+                            <i class="fab fa-fw fa-google-plus-g"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="btn btn-outline btn-social">
+                            <i class="fab fa-fw fa-twitter"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="btn btn-outline btn-social">
+                            <i class="fab fa-fw fa-linkedin-in"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-outline btn-social">
+                            <i class="fab fa-fw fa-dribbble"></i>
+                        </button>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div class="col">
+                <h4 class="text-uppercase">İLETİŞİM</h4>
+                <p>
+                    +90 (000) 000 00 00
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <small>
+                Copyright © Dönem Projesi 2021<br>
+                <div title="sevgi">Caner Özkan tarafından ❤️ ile yapılmıştır.</div>
+            </small>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $('.nav-icon').click(function () {
+            $('#nav-links').toggleClass("responsive");
+            return false;
+        });
+    </script>
+
+    <!--<script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/jquery-3.0.0.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>-->
 </body>
 </html>
