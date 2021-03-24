@@ -11,10 +11,10 @@ namespace DonemProjesi.Models
         protected override void Seed(OgrenciContext context)   //seed metodu test verileri eklememizi sağlar
         {
             List<Ogrenci> ogrenciler = new List<Ogrenci>() {
-                new Ogrenci(){OgrenciNumarasi=1, Ad="Buse", Soyad="Dokuzlar", Bolum="Bilgisayar Mühendisliği", Sinif=2, Sifre="123"},
-                new Ogrenci(){OgrenciNumarasi=2, Ad="Halil Taşkın", Soyad="Karadeniz", Bolum="Makine Mühendisliği", Sinif=1, Sifre="123"},
-                new Ogrenci(){OgrenciNumarasi=3, Ad="Süleyman Emre", Soyad="Akar", Bolum="Kimya Mühendisliği", Sinif=3, Sifre="333"},
-                new Ogrenci(){OgrenciNumarasi=4, Ad="Ali", Soyad="Yılmaz", Bolum="Bilgisayar Mühendisliği", Sinif=2, Sifre="abc"}
+                new Ogrenci(){OgrenciNumarasi=1, Ad="Buse", Soyad="Dokuzlar", Bolum="Bilgisayar Mühendisliği", Sinif=2,Yetenekler="c, java", Sifre="123"},
+                new Ogrenci(){OgrenciNumarasi=2, Ad="Halil Taşkın", Soyad="Karadeniz", Bolum="Makine Mühendisliği", Sinif=1,Yetenekler="c++, js",  Sifre="123"},
+                new Ogrenci(){OgrenciNumarasi=3, Ad="Süleyman Emre", Soyad="Akar", Bolum="Kimya Mühendisliği", Sinif=3,Yetenekler="python, sql",  Sifre="333"},
+                new Ogrenci(){OgrenciNumarasi=4, Ad="Ali", Soyad="Yılmaz", Bolum="Bilgisayar Mühendisliği", Sinif=2,Yetenekler="excel, c",  Sifre="abc"}
             };
 
             foreach (var item in ogrenciler)

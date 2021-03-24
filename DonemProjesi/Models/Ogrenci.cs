@@ -13,6 +13,7 @@ namespace DonemProjesi.Models
         public string Soyad { get; set; }
         public string Bolum { get; set; }
         public short Sinif { get; set; }
+        public string Yetenekler { get; set; }
         public string Sifre { get; set; }
 
         //FK
