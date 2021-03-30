@@ -111,6 +111,7 @@
     <Compile Include="Controllers\BasvuruController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OgrenciController.cs" />
+    <Compile Include="Controllers\ProjeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -138,6 +139,11 @@
     <Content Include="Views\Basvuru\Details.cshtml" />
     <Content Include="Views\Basvuru\Edit.cshtml" />
     <Content Include="Views\Basvuru\Index.cshtml" />
+    <Content Include="Views\Proje\Create.cshtml" />
+    <Content Include="Views\Proje\Delete.cshtml" />
+    <Content Include="Views\Proje\Details.cshtml" />
+    <Content Include="Views\Proje\Edit.cshtml" />
+    <Content Include="Views\Proje\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

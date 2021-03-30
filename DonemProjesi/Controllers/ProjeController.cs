@@ -10,107 +10,107 @@ using DonemProjesi.Models;
 
 namespace DonemProjesi.Controllers
 {
-    public class OgrenciController : Controller
+    public class ProjeController : Controller
     {
         private OgrenciContext db = new OgrenciContext();
 
-        // GET: Ogrenci
+        // GET: Proje
         public ActionResult Index()
         {
-            return View(db.Ogrenciler.ToList());
+            return View(db.Projeler.ToList());
         }
 
-        // GET: Ogrenci/Details/5
+        // GET: Proje/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ogrenci ogrenci = db.Ogrenciler.Find(id);
-            if (ogrenci == null)
+            Proje proje = db.Projeler.Find(id);
+            if (proje == null)
             {
                 return HttpNotFound();
             }
-            return View(ogrenci);
+            return View(proje);
         }
 
-        // GET: Ogrenci/Create
+        // GET: Proje/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Ogrenci/Create
+        // POST: Proje/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OgrenciID,OgrenciNumarasi,Ad,Soyad,Bolum,Sinif,Yetenekler,Sifre")] Ogrenci ogrenci)
+        public ActionResult Create([Bind(Include = "ProjeID,ProjeAdi,Aciklama,EklenmeTarihi")] Proje proje)
         {
             if (ModelState.IsValid)
             {
-                db.Ogrenciler.Add(ogrenci);
+                db.Projeler.Add(proje);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(ogrenci);
+            return View(proje);
         }
 
-        // GET: Ogrenci/Edit/5
+        // GET: Proje/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ogrenci ogrenci = db.Ogrenciler.Find(id);
-            if (ogrenci == null)
+            Proje proje = db.Projeler.Find(id);
+            if (proje == null)
             {
                 return HttpNotFound();
             }
-            return View(ogrenci);
+            return View(proje);
         }
 
-        // POST: Ogrenci/Edit/5
+        // POST: Proje/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OgrenciID,OgrenciNumarasi,Ad,Soyad,Bolum,Sinif,Yetenekler,Sifre")] Ogrenci ogrenci)
+        public ActionResult Edit([Bind(Include = "ProjeID,ProjeAdi,Aciklama,EklenmeTarihi")] Proje proje)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ogrenci).State = EntityState.Modified;
+                db.Entry(proje).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(ogrenci);
+            return View(proje);
         }
 
-        // GET: Ogrenci/Delete/5
+        // GET: Proje/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ogrenci ogrenci = db.Ogrenciler.Find(id);
-            if (ogrenci == null)
+            Proje proje = db.Projeler.Find(id);
+            if (proje == null)
             {
                 return HttpNotFound();
             }
-            return View(ogrenci);
+            return View(proje);
         }
 
-        // POST: Ogrenci/Delete/5
+        // POST: Proje/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Ogrenci ogrenci = db.Ogrenciler.Find(id);
-            db.Ogrenciler.Remove(ogrenci);
+            Proje proje = db.Projeler.Find(id);
+            db.Projeler.Remove(proje);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -18,9 +18,38 @@ body {
 
 /********************************************************************************/
 
-.content{
+/*Ogrenci Create*/
+.form-group{
+	margin-bottom: 20px;
+}
+
+.create {
+	background: linear-gradient(to right, #48cad3, #d09eff);
+	padding-bottom: 112px;
+	text-align: center;
+}
+
+.content-create {
 	max-width: 800px;
-	margin:auto;
+	margin: auto;
+	text-align:left;
+}
+
+.input{
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+h2{
+	margin-bottom: 15px;
+	padding-top: 15px;
+}
+
+.button {
+	max-width: 200px;
+	height: 30px;
+	text-align: center;
+	background: #ffdc98;
 }
 
 /********************************************************************************/
@@ -339,7 +368,7 @@ nav {
 
 header {
 	background: linear-gradient(to right, #48cad3, #d09eff);
-	padding-top:calc(112px + 10rem);
+	padding-top:100px;
 	padding-bottom: 112px;
 	text-align: center;
 }
@@ -399,11 +428,6 @@ header h2 {
 	text-align: left;
 }
 
-.form-group {
-	border-bottom: 1px solid #e9ecef;
-	padding-bottom: 3rem;
-	margin-bottom: 4rem;
-}
 
 
 .form-group input,.form-group textarea {
