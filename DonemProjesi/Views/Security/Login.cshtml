@@ -1,0 +1,26 @@
+﻿@model DonemProjesi.Models.Ogrenci
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<div class="create login">
+    <div class="content-create">
+        <h2>Giriş Yap</h2>
+        @ViewBag.Mesaj
+
+        @using (Html.BeginForm("Login","Security",FormMethod.Post))
+        {
+            @Html.LabelFor(m => m.OgrenciNumarasi)
+            @Html.TextBoxFor(m => m.OgrenciNumarasi, new { @class = "form-control", placeholder = "Numaranız" })
+
+            @Html.LabelFor(m => m.Sifre)
+            @Html.PasswordFor(m => m.Sifre, new { @class = "form-control", placeholder = "Şifreniz" })
+
+            <button type="submit">Giriş</button>
+        }
+
+    </div>
+</div>

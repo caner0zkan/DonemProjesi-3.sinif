@@ -15,6 +15,7 @@ namespace DonemProjesi.Controllers
         private OgrenciContext db = new OgrenciContext();
 
         // GET: Ogrenci
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Ogrenciler.ToList());
