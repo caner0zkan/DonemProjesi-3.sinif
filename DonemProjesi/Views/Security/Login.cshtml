@@ -8,19 +8,23 @@
 
 <div class="create login">
     <div class="content-create">
-        <h2>Giriş Yap</h2>
+        <h2 class="login-h2">Giriş Yap</h2>
         @ViewBag.Mesaj
 
-        @using (Html.BeginForm("Login","Security",FormMethod.Post))
+        @using (Html.BeginForm("Login", "Security", FormMethod.Post))
         {
+
             @Html.LabelFor(m => m.OgrenciNumarasi)
-            @Html.TextBoxFor(m => m.OgrenciNumarasi, new { @class = "form-control", placeholder = "Numaranız" })
+            <div>
+                @Html.TextBoxFor(m => m.OgrenciNumarasi, new { @class = "form-control login-input", placeholder = "Numaranız" })
+            </div>
 
             @Html.LabelFor(m => m.Sifre)
-            @Html.PasswordFor(m => m.Sifre, new { @class = "form-control", placeholder = "Şifreniz" })
+            <div>
+                @Html.PasswordFor(m => m.Sifre, new { @class = "form-control login-input", placeholder = "Şifreniz" })
+            </div>
 
-            <button type="submit">Giriş</button>
+            <button class="button login-button" type="submit">Giriş</button>
         }
-
     </div>
 </div>

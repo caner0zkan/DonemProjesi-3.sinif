@@ -4,71 +4,76 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="create">
+    <div class="content-create">
 
-<div>
-    <h4>Ogrenci</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.OgrenciNumarasi)
-        </dt>
+        <h2>Profilim</h2>
 
-        <dd>
-            @Html.DisplayFor(model => model.OgrenciNumarasi)
-        </dd>
+        <div>
+            <dl class="dl-horizontal">
+                <dt class="dt">
+                    @Html.DisplayNameFor(model => model.OgrenciNumarasi)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ad)
-        </dt>
+                <dd class="dt">
+                    @Html.DisplayFor(model => model.OgrenciNumarasi)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ad)
-        </dd>
+                <dt class="dt">
+                    @Html.DisplayNameFor(model => model.Ad)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Soyad)
-        </dt>
+                <dd class="dt">
+                    @Html.DisplayFor(model => model.Ad)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Soyad)
-        </dd>
+                <dt class="dt">
+                    @Html.DisplayNameFor(model => model.Soyad)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bolum)
-        </dt>
+                <dd class="dt">
+                    @Html.DisplayFor(model => model.Soyad)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bolum)
-        </dd>
+                <dt class="dt">
+                    @Html.DisplayNameFor(model => model.Bolum)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sinif)
-        </dt>
+                <dd class="dt">
+                    @Html.DisplayFor(model => model.Bolum)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sinif)
-        </dd>
+                <dt class="dt">
+                    @Html.DisplayNameFor(model => model.Sinif)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Yetenekler)
-        </dt>
+                <dd class="dt">
+                    @Html.DisplayFor(model => model.Sinif)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Yetenekler)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Yetenekler)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sifre)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Yetenekler)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sifre)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sifre)
+                </dt>
 
-    </dl>
+                <dd>
+                    @Html.DisplayFor(model => model.Sifre)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Profili Düzenle", "Edit", new { id = Model.OgrenciID })
+
+        </p>
+
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OgrenciID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

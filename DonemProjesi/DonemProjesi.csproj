@@ -146,6 +146,7 @@
     <Content Include="Views\Proje\Edit.cshtml" />
     <Content Include="Views\Proje\Index.cshtml" />
     <Content Include="Views\Security\Login.cshtml" />
+    <Content Include="Views\Home\Forum.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
