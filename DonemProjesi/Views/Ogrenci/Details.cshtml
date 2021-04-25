@@ -69,10 +69,14 @@
 
             </dl>
         </div>
-        <p>
-            @Html.ActionLink("Profili Düzenle", "Edit", new { id = Model.OgrenciID })
+        @*
+            <p>
+                @Html.ActionLink("Profili Düzenle", "Edit", new { id = Model.OgrenciID })
 
-        </p>
+            </p>
+        *@
+
+        <button type="button" class="login-button">@Html.ActionLink("Proje Oluştur","Create","Proje")</button>
 
     </div>
 </div>

@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BasvuruController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OgrenciController.cs" />
     <Compile Include="Controllers\ProjeController.cs" />
@@ -146,7 +147,7 @@
     <Content Include="Views\Proje\Edit.cshtml" />
     <Content Include="Views\Proje\Index.cshtml" />
     <Content Include="Views\Security\Login.cshtml" />
-    <Content Include="Views\Home\Forum.cshtml" />
+    <Content Include="Views\Forum\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

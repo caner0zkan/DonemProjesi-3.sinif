@@ -17,6 +17,5 @@ namespace DonemProjesi.Models
         public string Sifre { get; set; }
 
         //FK
-
     }
 }

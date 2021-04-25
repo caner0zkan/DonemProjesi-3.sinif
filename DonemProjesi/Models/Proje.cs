@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,6 +14,7 @@ namespace DonemProjesi.Models
         public DateTime EklenmeTarihi { get; set; }
 
         //FK
-
+        public int OgreenciID { get; set; }
+        public virtual Ogrenci Ogrenci { get; set; }
     }
 }
