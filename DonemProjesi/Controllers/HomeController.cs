@@ -16,7 +16,8 @@ namespace DonemProjesi.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(context.Ogrenciler.ToList());
+            return View();
+            //return View(context.Ogrenciler.ToList());
         }
     }
 }

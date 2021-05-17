@@ -14,6 +14,8 @@ namespace DonemProjesi.Models
         public DateTime EklenmeTarihi { get; set; }
 
         //FK
-        public List<Ogrenci> Ogrenciler { get; set; }
+        public int OgrenciID { get; set; }
+        public Ogrenci Ogrenci { get; set; }
+        
     }
 }

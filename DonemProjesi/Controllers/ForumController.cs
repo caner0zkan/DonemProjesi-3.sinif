@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DonemProjesi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace DonemProjesi.Controllers
 {
     public class ForumController : Controller
     {
+        private OgrenciContext db = new OgrenciContext();
+
         // GET: Forum
         public ActionResult Index()
         {
-            return View();
+            return View(db.Projeler.ToList());
         }
     }
 }

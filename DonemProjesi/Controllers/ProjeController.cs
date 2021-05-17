@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DonemProjesi.Models;
+using System.Web.Security;
 
 namespace DonemProjesi.Controllers
 {
@@ -46,10 +47,13 @@ namespace DonemProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProjeID,ProjeAdi,Aciklama,EklenmeTarihi")] Proje proje)
+        public ActionResult Create([Bind(Include = "ProjeID,ProjeAdi,Aciklama,EklenmeTarihi,OgrenciID")] Proje proje)
         {
             if (ModelState.IsValid)
             {
+                proje.EklenmeTarihi = DateTime.Now;
+                proje.OgrenciID = 1;
+                
                 db.Projeler.Add(proje);
                 db.SaveChanges();
                 return RedirectToAction("Index");
