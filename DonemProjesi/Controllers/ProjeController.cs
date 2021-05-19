@@ -52,8 +52,8 @@ namespace DonemProjesi.Controllers
             if (ModelState.IsValid)
             {
                 proje.EklenmeTarihi = DateTime.Now;
-                proje.OgrenciID = 1;
-                
+                proje.OgrenciID = (int)Session["OgrenciID"];
+
                 db.Projeler.Add(proje);
                 db.SaveChanges();
                 return RedirectToAction("Index");

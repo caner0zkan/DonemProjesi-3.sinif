@@ -17,7 +17,7 @@ namespace DonemProjesi.Controllers
             return View();
         }
 
-        public int girisYapan;
+
 
         [HttpPost]
         public ActionResult Login(Ogrenci ogrenci)
@@ -26,7 +26,7 @@ namespace DonemProjesi.Controllers
             if (kullanici!=null)
             {
                 FormsAuthentication.SetAuthCookie(kullanici.Ad, false);
-                girisYapan = ogrenci.OgrenciID;
+                Session.Add("OgrenciID", kullanici.OgrenciID);
                 return RedirectToAction("Details","Ogrenci", new {@id=kullanici.OgrenciID });
             }
             else
