@@ -26,7 +26,7 @@ namespace DonemProjesi.Controllers
             if (kullanici!=null)
             {
                 FormsAuthentication.SetAuthCookie(kullanici.Ad, false);
-                Session.Add("OgrenciID", kullanici.OgrenciID);
+                Session.Add("OgrenciID", kullanici.OgrenciID);      //kimlik doğrulamasu yapılan kullanıcının ID'si alınıyor
                 return RedirectToAction("Details","Ogrenci", new {@id=kullanici.OgrenciID });
             }
             else

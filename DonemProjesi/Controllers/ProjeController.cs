@@ -52,8 +52,8 @@ namespace DonemProjesi.Controllers
             if (ModelState.IsValid)
             {
                 proje.EklenmeTarihi = DateTime.Now;
-                proje.OgrenciID = (int)Session["OgrenciID"];
-
+                proje.OgrenciID = (int)Session["OgrenciID"];    //projeyi oluşturacak kullanıcının ID'si foreign key olarak atanıyor 
+                
                 db.Projeler.Add(proje);
                 db.SaveChanges();
                 return RedirectToAction("Index");

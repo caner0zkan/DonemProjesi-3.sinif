@@ -16,6 +16,6 @@ namespace DonemProjesi.Models
         //FK
         public int OgrenciID { get; set; }
         public Ogrenci Ogrenci { get; set; }
-        
+
     }
 }
