@@ -143,12 +143,6 @@ dd {
         }
 
         .custom_table tbody td a {
-            color: #000;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            display: block;
-            text-decoration: none;
         }
 
         .custom_table tbody td small, .last_activity {
@@ -220,6 +214,18 @@ dd {
             margin-bottom: 4px;
             color: #ff3300
         }
+
+.detay {
+    background-color: #ffdc98;
+    border: none;
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 /********************************************************************************/

@@ -4,39 +4,49 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Proje</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProjeAdi)
-        </dt>
+<div class="create">
+    <div class="content-create">
 
-        <dd>
-            @Html.DisplayFor(model => model.ProjeAdi)
-        </dd>
+        <h2>Proje Detayı</h2>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Aciklama)
-        </dt>
+        <div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Aciklama)
-        </dd>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProjeAdi)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EklenmeTarihi)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ProjeAdi)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.EklenmeTarihi)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Aciklama)
+                </dt>
 
-    </dl>
+                <dd>
+                    @Html.DisplayFor(model => model.Aciklama)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EklenmeTarihi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EklenmeTarihi)
+                </dd>
+
+            </dl>
+        </div>
+
+        @*
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ProjeID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        *@
+
+
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProjeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

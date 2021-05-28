@@ -6,14 +6,13 @@
 
 
 
-
-
 <table class="table table-striped table-bordered table-hover table-condensed cols-3 custom_table">
     <thead>
         <tr>
             <th scope="col">Proje</th>
             <th scope="col">Etkileşimler</th>
             <th scope="col">Yayınlanma Tarihi</th>
+            <th scope="col">Detay</th>
         </tr>
     </thead>
     <tbody>
@@ -21,8 +20,8 @@
         {
             <tr>
                 <td>
-                    <a href="#">@Html.DisplayFor(modelItem => item.ProjeAdi)</a>
-                    <small><a href="#">@Html.DisplayFor(modelItem => item.Ogrenci.Ad)</a></small>
+                    <div>@Html.DisplayFor(modelItem => item.ProjeAdi)</div>
+                    <small><a href="">@Html.DisplayFor(modelItem => item.Ogrenci.Ad)</a></small>
                 </td>
                 <td>
                     <ul class="activity_outer">
@@ -30,7 +29,12 @@
                         <li><strong>01</strong><span>Dahil olanlar</span></li>
                     </ul>
                 </td>
-                <td><div class="last_activity"><span class="time_ago">@Html.DisplayFor(modelItem => item.EklenmeTarihi)</span></div></td>
+                <td>
+                    <div class="last_activity"><span class="time_ago">@Html.DisplayFor(modelItem => item.EklenmeTarihi)</span></div>
+                </td>
+                <td>
+                    @Html.ActionLink("Proje Detayı", "Details", "Proje", new { id = item.ProjeID }, new { @class = "detay" })
+                </td>
             </tr>
         }
 

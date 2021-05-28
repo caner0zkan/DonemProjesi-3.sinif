@@ -15,7 +15,7 @@ namespace DonemProjesi.Controllers
         // GET: Forum
         public ActionResult Index()
         {
-            //Include(o => o.Ogrenci) -- öğrenci bilgilerine ulaşmamızı sağlar
+            //Include(o => o.Ogrenci) -- öğrenci bilgilerini dahil ediyoruz
             return View(db.Projeler.Include(o => o.Ogrenci).ToList());
         }
     }
