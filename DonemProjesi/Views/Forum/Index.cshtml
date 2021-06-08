@@ -33,7 +33,8 @@
                     <div class="last_activity"><span class="time_ago">@Html.DisplayFor(modelItem => item.EklenmeTarihi)</span></div>
                 </td>
                 <td>
-                    @Html.ActionLink("Proje Detayı", "Details", "Proje", new { id = item.ProjeID }, new { @class = "detay" })
+                    <button type="button" class="login-button">@Html.ActionLink("Proje Detayı", "Details", "Proje", new { id = item.ProjeID }, new { @class = "detayy" })</button>
+                    <button type="button" class="login-button">Başvur</button>
                 </td>
             </tr>
         }

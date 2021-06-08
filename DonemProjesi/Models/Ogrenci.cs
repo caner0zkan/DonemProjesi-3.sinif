@@ -16,6 +16,9 @@ namespace DonemProjesi.Models
         public string Yetenekler { get; set; }
         public string Sifre { get; set; }
 
+        public string BekleyenProje { get; set; }
+        public string OnaylananProje { get; set; }
+
         //FK
         public List<Proje> Projeler { get; set; }
     }
