@@ -23,21 +23,49 @@
                     <div>@Html.DisplayFor(modelItem => item.ProjeAdi)</div>
                     <small><a href="">@Html.DisplayFor(modelItem => item.Ogrenci.Ad)</a></small>
                 </td>
-                <td>
-                    <ul class="activity_outer">
-                        <li><strong>03</strong><span>Başvuranlar</span></li>
-                        <li><strong>01</strong><span>Dahil olanlar</span></li>
-                    </ul>
+                <td id="users">
+                    <a class="nameCard" id="1" onclick="nameFunc()" style="background-color: #80ced6; padding: 3px; margin: 1px; border-radius: 10px;">Emre</a>
+                    <a class="nameCard" id="2" onclick="nameFunc()" style="background-color: #80ced6; padding: 3px; margin: 1px; border-radius: 10px;">Halil</a>
                 </td>
                 <td>
                     <div class="last_activity"><span class="time_ago">@Html.DisplayFor(modelItem => item.EklenmeTarihi)</span></div>
                 </td>
                 <td>
                     <button type="button" class="login-button">@Html.ActionLink("Proje Detayı", "Details", "Proje", new { id = item.ProjeID }, new { @class = "detayy" })</button>
-                    <button type="button" class="login-button">Başvur</button>
+                    <button id="click" type="button" class="login-button" onclick="myFunction()">Başvur</button>
                 </td>
             </tr>
         }
 
     </tbody>
 </table>
+
+
+<script>
+    function myFunction() {
+        var tbl = document.getElementById("users");
+        var btn = document.createElement("a");
+        btn.innerHTML = "Buse";
+        btn.style.backgroundColor = "#f7786b";
+        btn.style.borderRadius = "10px";
+        btn.setAttribute("class", "nameCard")
+        btn.setAttribute("id", "3")
+        btn.setAttribute("onclick", "nameFunc()")
+        btn.style.padding = "3px";
+        btn.style.margin = "1px";
+        tbl.appendChild(btn);
+    }
+
+    var count = 1;
+    function nameFunc() {
+        var card = document.getElementById("3");
+        if (count == 0) {
+            card.style.backgroundColor = "#f7786b";
+            count = 1;
+        }
+        else {
+            card.style.backgroundColor = "#80ced6";
+            count = 0;
+        }
+    }
+</script>
